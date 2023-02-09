@@ -14,6 +14,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine($"{twt.Count}");
             Console.WriteLine($"{twt[0].Latitude}");
             Console.WriteLine($"{twt[0].Longitude}");
+
+            Sentiment_Repository sentiments = new Sentiment_Repository();
+            List<Sentiment> sentmt = sentiments.ReadSentiments("sentiments.csv");
+            Console.WriteLine($"{sentmt.Count}");
         }
     }
 }

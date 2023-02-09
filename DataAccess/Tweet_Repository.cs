@@ -44,21 +44,20 @@ namespace DataAccess
                         twt.Time = dateAndTime[1];
                         twt.Message = new List<string>();
                         for (int i = 0; i < message.Length; i++) if (message[i] != string.Empty) twt.Message.Add(message[i]);
+                        tweets.Add(twt);
                     }
                     catch { }
 
-                    tweets.Add(twt);
+                    //Console.WriteLine($"{twt.Latitude}");
+                    //Console.WriteLine($"{twt.Longitude}");
+                    //Console.WriteLine($"{twt.Date}");
+                    //Console.WriteLine($"{twt.Time}");
+                    //foreach (string s in twt.Message)
+                    //{
+                    //    Console.WriteLine($"{s}");
+                    //}
 
-                    Console.WriteLine($"{twt.Latitude}");
-                    Console.WriteLine($"{twt.Longitude}");
-                    Console.WriteLine($"{twt.Date}");
-                    Console.WriteLine($"{twt.Time}");
-                    foreach (string s in twt.Message)
-                    {
-                        Console.WriteLine($"{s}");
-                    }
-
-                    Console.WriteLine($"-------------------------------\n");
+                    //Console.WriteLine($"-------------------------------\n");
                 }
             }
             return tweets;
