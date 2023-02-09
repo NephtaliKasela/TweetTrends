@@ -21,8 +21,6 @@ namespace DataAccess
                 if (details.Length >= 2)
                 {
                     Sentiment sentmt = new Sentiment();
-                    
-                    Console.WriteLine($"{details[0]} = {details[1]}");
                     try
                     {
                         sentmt.Content = details[0];
@@ -31,6 +29,7 @@ namespace DataAccess
                         sentiments.Add(sentmt);
                     }
                     catch { }
+                    //Console.WriteLine($"{details[0]} = {details[1]}");
                 }
             }
             return sentiments;
