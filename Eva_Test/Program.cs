@@ -12,8 +12,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Tweet_Repository Tweets = new Tweet_Repository();
             List<Tweet> twt = Tweets.ReadTweets("family_tweets2014.txt");
             Console.WriteLine($"{twt.Count}");
-            Console.WriteLine($"{twt[0].Latitude}");
-            Console.WriteLine($"{twt[0].Longitude}");
+            Console.WriteLine($"{twt[0].Coordinates.Latitude}");
+            Console.WriteLine($"{twt[0].Coordinates.Longitude}");
 
             Sentiment_Repository sentiments = new Sentiment_Repository();
             List<Sentiment> sentmt = sentiments.ReadSentiments("sentiments.csv");
@@ -27,8 +27,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine($"{t.Sentiment}");
             }
 
-            USA_States_Coordinates_Repository coor = new USA_States_Coordinates_Repository();
-            List<State> states = coor.Read_USAmap_Coordinates("states.json");
+            States_Coordinates_Repository coor = new States_Coordinates_Repository();
+            List<State> states = coor.Read_States_Coordinates("states.json");
 
             foreach(State st in states)
             {

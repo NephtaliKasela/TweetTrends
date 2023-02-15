@@ -38,8 +38,8 @@ namespace DataAccess
 
                     try
                     {
-                        twt.Latitude = Convert.ToDouble(cordinates[0]);
-                        twt.Longitude = Convert.ToDouble(cordinates[1]);
+                        twt.Coordinates.Latitude = Convert.ToDouble(cordinates[0]);
+                        twt.Coordinates.Longitude = Convert.ToDouble(cordinates[1]);
                         twt.Date = dateAndTime[0];
                         twt.Time = dateAndTime[1];
                         twt.Message = new List<string>();

@@ -9,10 +9,10 @@ using Newtonsoft.Json;
 
 namespace DataAccess
 {
-    public class USA_States_Coordinates_Repository
+    public class States_Coordinates_Repository
     {
         List<State> states = new List<State>(); 
-        public List<State> Read_USAmap_Coordinates(string path)
+        public List<State> Read_States_Coordinates(string path)
         {
             string strJsonFile = File.ReadAllText(path);
             var states_coordinates = JsonConvert.DeserializeObject<IDictionary>(strJsonFile);
